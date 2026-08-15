@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 EXTERNAL_APPS =[
     'home',
     'authentication',
+    'election',
 ]
 INSTALLED_APPS += EXTERNAL_APPS
 MIDDLEWARE = [
