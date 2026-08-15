@@ -4,10 +4,11 @@ from django.http import HttpResponse
 
 def election(request):
     return render(request,"election-check.html",{"voters":voter})
-voter = [{"name":"amit","age":23},
-           {"name":"ashish","age":21},
-           {"name":"rahul","age":23},
-           {"name":"anuksh","age":17},
-           {"name":"rohit","age":18},
-           {"name":"sachin","age":34},
+voter = [{"name":"amit","age":23,"gender":"male"},
+           {"name":"ashish","age":21,"gender":"male"},
+           {"name":"rahul","age":23,"gender":"male"},
+           {"name":"anuksh","age":17,"gender":"male"},
+           {"name":"rohit","age":18,"gender":"male"},
+           {"name":"sachin","age":34,"gender":"male"},
+           {"name":"sakshi","age":25,"gender":"female"},
 ]

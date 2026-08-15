@@ -9,23 +9,31 @@
 
 <body>
     <h1>check the result</h1>
-    {%for voter in voters%}
     <table>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>{{voter.name}}</td>
-            <td>{{voter.age}}</td>
-            {% if voter.age >= 18%}
-            <td>he can vote</td>
-            {%else%}
-            <td>he cannot vote</td>
-            {%endif%}
-        </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Eligibility</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for voter in voters %}
+            <tr>
+                <td>{{voter.name}}</td>
+                <td>{{voter.age}}</td>
+                <td>{{voter.gender}}</td>
+                {% if voter.age >= 18%}
+                <td>he can vote</td>
+                {%else%}
+                <td>he cannot vote</td>
+                {%endif%}
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
-    {%endfor%}
 </body>
 
 </html>
