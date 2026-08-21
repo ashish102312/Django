@@ -6,3 +6,7 @@ def home(request):
 
 def checking(request):
     return render(request,"check.html")
+
+
+def gret(request):
+    return HttpResponse("<h1>this is greeting from my side</h1>")

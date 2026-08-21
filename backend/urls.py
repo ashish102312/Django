@@ -21,10 +21,12 @@ from authentication.views import *
 from election.views import *
 urlpatterns = [
     path('',home,name="home"),
+    path('gret',gret,name="gret"),
     path('checking',checking,name="checking"),
     path('login',login,name="login"),
     path('submit_data',submit_data,name="submit_data"),
     path('admin/', admin.site.urls),
     path('election',election,name = "election"),
+
 ]
 

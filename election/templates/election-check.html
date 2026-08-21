@@ -22,6 +22,7 @@
         <tbody>
             {% for voter in voters %}
             <tr>
+                <td>{{forloop.counter}}</td>
                 <td>{{voter.name}}</td>
                 <td>{{voter.age}}</td>
                 <td>{{voter.gender}}</td>
