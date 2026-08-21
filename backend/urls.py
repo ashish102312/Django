@@ -22,6 +22,7 @@ from election.views import *
 urlpatterns = [
     path('',home,name="home"),
     path('gret',gret,name="gret"),
+    path('items',items,name="items"),
     path('checking',checking,name="checking"),
     path('login',login,name="login"),
     path('submit_data',submit_data,name="submit_data"),
