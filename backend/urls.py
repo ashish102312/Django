@@ -25,6 +25,10 @@ urlpatterns = [
     #its is dymnic url modification
     path('items/<str:menus>/',items,name="items"),
     path('checking',checking,name="checking"),
+    #its is dynamic url with query parameter
+    path('recipe/',recipe,name="recipe"),
+    path('restaurant/',restaurant, name="restaurant"),
+    path('cal/',cal,name="cal"),
     path('login',login,name="login"),
     path('submit_data',submit_data,name="submit_data"),
     path('admin/', admin.site.urls),
