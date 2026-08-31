@@ -29,6 +29,8 @@ urlpatterns = [
     path('recipe/',recipe,name="recipe"),
     path('restaurant/',restaurant, name="restaurant"),
     path('cal/',cal,name="cal"),
+    #its is handling optional paramters
+    path('restro_detail/<str:category>[\w-]+/?<str:subcategory>[\w-]+/?',restro_detail, name="restro_detail"),
     path('login',login,name="login"),
     path('submit_data',submit_data,name="submit_data"),
     path('admin/', admin.site.urls),

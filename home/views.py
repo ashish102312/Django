@@ -64,4 +64,12 @@ def cal(request):
     else:
         return HttpResponse("invalid operator. Please provide a valid sign (+, -, *, /)")
     
-    
+#handling optional paramters
+def restro_detail(request,category,subcategory):
+    #handle the case when subcategory is not provided
+    if not subcategory:
+        message  = f"showing all items in {category}"
+    else:
+        #subcategory provided
+        message = f"showing {subcategory} -> {category}"
+    return HttpResponse(message)
