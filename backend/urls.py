@@ -35,6 +35,7 @@ urlpatterns = [
     path('submit_data',submit_data,name="submit_data"),
     path('admin/', admin.site.urls),
     path('election',election,name = "election"),
+    path('demo',demo,name = "demo"),
 
 ]
 

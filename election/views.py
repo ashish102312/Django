@@ -12,3 +12,12 @@ voter = [{"name":"amit","age":23,"gender":"male"},
            {"name":"sachin","age":34,"gender":"male"},
            {"name":"sakshi","age":25,"gender":"female"},
 ]
+
+def demo(request):
+    return render(request,"demo.html",{"details" :detail})
+detail = [{
+    "name": "Rahul",
+    "Course": "python",
+    "city" : "Delhi",
+    "studetns" :["Rohit","Ramesh","Suresh"]
+}]
