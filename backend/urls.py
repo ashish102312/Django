@@ -36,6 +36,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('election',election,name = "election"),
     path('demo',demo,name = "demo"),
+    path('students',students,name = "students"),
 
 ]
 

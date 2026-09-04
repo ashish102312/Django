@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, request
 # Create your views here.
 
 def election(request):
@@ -21,3 +21,15 @@ detail = [{
     "city" : "Delhi",
     "studetns" :["Rohit","Ramesh","Suresh"]
 }]
+
+def students(request):
+    student_list = [
+        {"name": "kapil",
+         "subject" : "python"},
+         {"name": "ashish",
+          "subject" :" django"},
+          {"name": "aman",
+           "subject" : "mongodb"
+           }
+    ]
+    return render(request,"students.html",{"students":student_list})
