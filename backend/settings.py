@@ -42,6 +42,8 @@ EXTERNAL_APPS =[
     'home',
     'authentication',
     'election',
+    'caPartice',
+    'CA'
 ]
 INSTALLED_APPS += EXTERNAL_APPS
 MIDDLEWARE = [

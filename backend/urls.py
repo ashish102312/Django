@@ -15,10 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , re_path
 from home.views import *
 from authentication.views import *
 from election.views import *
+from caPartice.views import *
+from CA.views import * 
 urlpatterns = [
     path('',home,name="home"),
     path('gret',gret,name="gret"),
@@ -37,6 +39,22 @@ urlpatterns = [
     path('election',election,name = "election"),
     path('demo',demo,name = "demo"),
     path('students',students,name = "students"),
+    path('exam/',exam,name="exam"),
+    path('Exm/<str:subject>/',Exm, name="Exm"),
+    path('student/<int:id>/',student, name="student"),
+    path('per/',per, name="per"),
+    re_path(r'^Hallticket/(?P<ticket>\d{6})/$',Hallticket,name="Hallticket"),
+
+
+
+    #ca
+    path('filter/',filter, name="filter"),
+    
+    path('movie/<str:genre>/', movie, name="movie"),
+    path('screen/<int:id>/',screen, name = "screen"),
+    re_path(r'^booking/(?P<booking_id>BK\d{4})/$',booking,name="booking"),
+    path('search/',search,name="searching"),
+
 
 ]
 
