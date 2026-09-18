@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.middleware.csrf import get_token
 # Create your views here.
 
 #question3
@@ -31,3 +32,8 @@ def search(request):
     city2 = request.GET.get('city2', "non "),
     date = request.GET.get('date',99-99-99)
     return HttpResponse(f"the city is : {city2} and date is : {date}")
+
+
+def simple_form(request):
+    csrf_token = get_token(request)
+    return HttpResponse(f"<form methodg>")
