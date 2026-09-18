@@ -49,7 +49,7 @@ urlpatterns = [
 
     #ca
     path('filter/',filter, name="filter"),
-    
+
     path('movie/<str:genre>/', movie, name="movie"),
     path('screen/<int:id>/',screen, name = "screen"),
     re_path(r'^booking/(?P<booking_id>BK\d{4})/$',booking,name="booking"),
